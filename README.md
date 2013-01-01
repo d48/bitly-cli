@@ -34,3 +34,8 @@ Result:  http://d48.io/Wc6PZT
 http://d48.io/Wc6PZT has been copied to the clipboard.
 ```
 
+## Todo
+
+1. Add other bit.ly api methods other than `shorten` when needed
+2. Tests
+3. Separate methods in it's own module once gets bigger

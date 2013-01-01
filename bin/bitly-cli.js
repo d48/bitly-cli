@@ -3,6 +3,7 @@
 var Bitly   = require('bitly')
   , path    = require('path')
   , config  = require( path.join(__dirname, '../config', 'config.json') )
+  , package = require( path.join(__dirname, '../', 'package.json') )
   , bitly   = new Bitly(config.username, config.apiKey)
   , exec    = require('child_process').exec
   , args    = process.argv.splice(2)
@@ -10,14 +11,36 @@ var Bitly   = require('bitly')
   , log     = console.log
   ;
 
+// list of accepted commands
 var commands = { 
-  shorten: shorten
-  , help: help
+       help: help
+  , shorten: shorten
+  , version: version
 };
+
+// kick off the command parsed from the command-line
+if(commands[command]) {
+  commands[command].apply(this, args);
+} else {
+  commands['help']();
+}
 
 
 // Main functions
 // ----------------------------------------------------------------------------
+
+
+/**
+ * Display usage information
+ * 
+ * @param url {String} url string to convert
+ * @return void log output of how to use
+ */
+function help() {
+  log('\n     Usage: bit shorten "http://www.someurl.com"');
+};
+
+
 
 /**
  * Calls bitly api to shorten url
@@ -31,27 +54,22 @@ function shorten(cmd, url) {
 
   bitly.shorten(url, function(err, res) {
     if(err) {
-      console.log("Error thrown: ", err);
+      throw err;
     } else {
       var shortUrl = res.data.url;
       log("Result: ", shortUrl);
       exec("echo " + shortUrl + " | pbcopy");
-
       log("\n" + shortUrl + " has been copied to the clipboard.")
     }
   });
 };
 
+
 /**
- * Usage
+ * Outputs current version of the cli tool
  * 
- * @param url {String} url string to convert
- * @return void log output of how to use
+ * @return {String} version number
  */
-function help() {
-  log('Usage: bitly shorten "http://www.someurl.com"');
-};
-
-
-// kick off the command parsed from the command-line
-commands[command].apply(this, args);
+function version() {
+  log("\n     Current version: " + package.version);
+}

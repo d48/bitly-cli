@@ -1,7 +1,8 @@
 {
   "name": "bitly-cli",
   "version": "0.0.1",
-  "description": "bitly cli tool",
+  "description": "node bitly cli tool to create custom shortened urls",
+  "keywords": "bitly, cli, command line interface, url, shorten, shortened",
   "main": "bitly-cli.js",
   "bin": {
     "bit": "./bin/bitly-cli.js"
@@ -12,7 +13,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/design48/bitly-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/design48/bitly-cli"
+  },
   "author": "Ryan Regalado",
   "license": "MIT"
 }

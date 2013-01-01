@@ -2,7 +2,10 @@
   "name": "bitly-cli",
   "version": "0.0.1",
   "description": "bitly cli tool",
-  "main": "app.js",
+  "main": "bitly-cli.js",
+  "bin": {
+    "bit": "./bin/bitly-cli.js"
+  },
   "dependencies": {
     "bitly": "1.2.4"
   },

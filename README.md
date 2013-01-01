@@ -4,14 +4,10 @@ This is a small command line interface tool that uses the [node bit.ly api lib](
 
 # Install
 
-`npm install bitly-cli`
+`$ npm install bitly-cli` or `$ git clone git@github.com:design48/bitly-cli.git && bitly-cli`
 
-or
-
-`git clone git@github.com/design48/bitly-cli && bitly-cli`
-
-## To create a symbolic link to `bitly-cli` in the `bin` folder. Alias is now `bit`
-`npm link`
+Sets `$ bit` as symbolic link and program that can be run globally
+`$ npm link`
 
 # Configuration
 

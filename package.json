@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+  "repository": "https://github.com/design48/bitly-cli",
   "author": "Ryan Regalado",
   "license": "MIT"
 }

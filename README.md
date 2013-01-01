@@ -1,15 +1,16 @@
-# Introduction
+# Overview
 
 This is a small command line interface tool that uses the [node bit.ly api lib](https://github.com/tanepiper/node-bitly) to shorten a url for a custom domain.
 
-# Install
+## Installation
 
 `$ npm install bitly-cli` or `$ git clone git@github.com:design48/bitly-cli.git && bitly-cli`
 
-Sets `$ bit` as symbolic link and program that can be run globally
+Set **bit** as symbolic link and that can be run globally
+
 `$ npm link`
 
-# Configuration
+## Configuration
 
 Create a `config.json` file in the config directory
 
@@ -20,7 +21,7 @@ Create a `config.json` file in the config directory
 }
 ```
 
-# Usage
+## Usage
 
 `$ bit shorten "http://www.google.com"`
 

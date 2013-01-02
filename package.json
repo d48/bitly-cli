@@ -2,6 +2,7 @@
   "name": "bitly-cli",
   "version": "0.0.2",
   "description": "node bitly cli tool to create custom shortened urls",
+  "private": true,
   "keywords": [
     "bitly", "cli", "command line interface", "url", "shorten", "shortened"
   ],

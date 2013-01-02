@@ -4,7 +4,7 @@ This is a small command line interface tool that uses the [node bit.ly api lib](
 
 ## Installation
 
-`$ npm install bitly-cli` or `$ git clone git@github.com:design48/bitly-cli.git && bitly-cli`
+`git clone git@github.com:design48/bitly-cli.git && cd bitly-cli`
 
 Set **bit** as symbolic link and that can be run globally
 
@@ -25,7 +25,7 @@ Create a `config.json` file in the config directory
 
 `$ bit shorten "http://www.google.com"`
 
-Ouput would be:
+Ouput would be (assuming you set d48.io as your custom short domain):
 
 ```bash
 Shortening this url:  http://www.google.com
